@@ -22,8 +22,6 @@ export class CadastrarComponent implements OnInit {
 
   ngOnInit(){
     window.scroll(0,0)
-
-
     environment.menu = false
   }
 
@@ -39,12 +37,12 @@ export class CadastrarComponent implements OnInit {
     this.usuario.tipoUsuario = this.tipoUsu
 
     if(this.usuario.senha != this.confirmaSenha){
-    alert('As senhas estão incoretas')
+    alert('As senhas estão incorretas')
     }else{
     this.auth.cadastar(this.usuario).subscribe((resp: Usuario) => {
       this.usuario = resp
       this.router.navigate(['/Logar'])
-      alert('Usuario Cadastrado com sucesso!')
+      alert('Usuario cadastrado com sucesso!')
     })
   }
 }

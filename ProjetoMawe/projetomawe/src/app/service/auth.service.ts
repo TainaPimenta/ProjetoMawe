@@ -40,4 +40,8 @@ export class AuthService {
     return ok
   }
 
+  contato(usuario: Usuario) :Observable<Usuario>{
+    return this.http.post<Usuario>('http://localhost:8080/ProjetoMawe/Usuario/Contato', usuario)
+  }
+
 }

@@ -44,7 +44,7 @@ export class LogarComponent implements OnInit {
       
     }, erro => {
       if(erro.status == 500  || erro.status == 400){
-        alert('Usuario ou senha incoretos, tente novamente!')
+        alert('Usuario ou senha incorretos, tente novamente!')
       }
     })
   }
